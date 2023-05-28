@@ -1,0 +1,27 @@
+{
+  "name": "chrome_ext",
+  "description": "A Vue.js web extension",
+  "version": null,
+  "manifest_version": 2,
+  "icons": {
+    "48": "icons/icon.png",
+    "128": "icons/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "chrome_ext",
+    "default_popup": "popup/bg.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": true
+  },
+  "chrome_url_overrides": {
+    "newtab": "tab/tab.html"
+  },
+  "permissions": [ "storage", "activeTab"]
+}
